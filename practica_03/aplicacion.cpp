@@ -16,8 +16,8 @@ void aplicacion(string archivo_administradores, string archivo_clientes, int met
     datos_clientes = decodificar(datos_clientes, metodo, semilla);
     datos_clientes = bin2text(datos_clientes);
 
-    cout << datos_administradores << endl;
-    cout << datos_clientes << endl;
+    //cout << datos_administradores << endl;
+    //cout << datos_clientes << endl;
 
 
     while(true){
@@ -30,12 +30,12 @@ void aplicacion(string archivo_administradores, string archivo_clientes, int met
 
         cin >> tipo_persona;
         if(tipo_persona==1){
-            cout << "Ingresar su usuario de administrador: ";
-            cin >> usuario;
+            /*cout << "Ingresar su usuario de administrador: ";
+            cin >> usuario;*/
             cout << "Ingresar su clave de administrador: ";
             cin >> clave;
-            cout << datos_administradores << endl;
-            validar = validar_administrador(datos_administradores, usuario, clave);
+            //cout << datos_administradores << endl;
+            validar = validar_administrador(datos_administradores, clave);
             if (validar){
 
                 while (true){

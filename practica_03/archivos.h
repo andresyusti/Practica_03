@@ -11,7 +11,7 @@ void aplicacion(string archivo_administrador, string archivo_clientes, int metod
 
 
 string leer_txt(string name);
-bool validar_administrador(string archivo, string usuario_ingresado, string clave_ingresado);
+bool validar_administrador(string archivo, string clave_ingresado);
 string agregar_clientes(string archivo);
 
 string validar_clientes(string archivo, string cedula_ingresada, string clave_ingresada);

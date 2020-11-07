@@ -14,27 +14,31 @@ string leer_txt(string name){
   return data;
 }
 
-bool validar_administrador(string archivo, string usuario_ingresado, string clave_ingresado){
+bool validar_administrador(string archivo, string clave_ingresado){
 
     string usuario_confirmar, clave_confirmar;
     bool ingreso=false;
 
-    for(unsigned int i=0; i<archivo.length(); i++){
-        for(;archivo[i]!=' '; i++){
-            usuario_confirmar.push_back(archivo[i]);
-        }
-        for(i++;archivo[i]!='\n'; i++){
-            clave_confirmar.push_back(archivo[i]);
-        }
-        if(usuario_ingresado==usuario_confirmar && clave_ingresado==clave_confirmar){
-            cout << "Usted ha ingresado." << endl;
-            ingreso=true;
-        }
-        else{
-            usuario_confirmar.clear();
-            clave_confirmar.clear();
-        }
+    if (archivo==clave_ingresado){
+        ingreso=true;
     }
+
+//    for(unsigned int i=0; i<archivo.length(); i++){
+//        for(;archivo[i]!=' '; i++){
+//            usuario_confirmar.push_back(archivo[i]);
+//        }
+//        for(i++;archivo[i]!='\n'; i++){
+//            clave_confirmar.push_back(archivo[i]);
+//        }
+//        if(usuario_ingresado==usuario_confirmar && clave_ingresado==clave_confirmar){
+//            cout << "Usted ha ingresado." << endl;
+//            ingreso=true;
+//        }
+//        else{
+//            usuario_confirmar.clear();
+//            clave_confirmar.clear();
+//        }
+//    }
     return ingreso;
 }
 
